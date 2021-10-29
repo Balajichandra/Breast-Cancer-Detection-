@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Brest Cancer Detection</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+            
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="texture_mean"><br>
+                <input class="form-input" type="text" name="area_mean" ><br>
+                <input class="form-input" type="text" name="smoothness_mean"><br>
+                <input class="form-input" type="text" name="concavity_mean" ><br>
+                <input class="form-input" type="text" name="symmetry_mean" ><br>
+                <input class="form-input" type="text" name="fractal_dimension_mean" ><br>
+                <input class="form-input" type="text" name="texture_se" ><br>
+                <input class="form-input" type="text" name="area_se"><br>
+                <input class="form-input" type="text" name="smoothness_se" ><br>
+                <input class="form-input" type="text" name="concavity_se" ><br>
+                <input class="form-input" type="text" name="symmetry_se" ><br>
+                <input class="form-input" type="text" name="fractal_dimension_se" ><br>
+                <input class="form-input" type="text" name="smoothness_worst" ><br>
+                <input class="form-input" type="text" name="concavity_worst" ><br>
+                <input class="form-input" type="text" name="symmetry_worst" ><br>
+                <input class="form-input" type="text" name="fractal_dimension_worst" ><br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Balajichandra/Diabetics-Prediction-"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               
+           </div>
+           <p class='footer-description'>Made with ❤️ by Balaji C.</p>
+       </div>
+
+    </body>
+</html>
